@@ -12,10 +12,10 @@ public class LoginTest extends BaseTest {
         DashboardPage dasbhboardPage = new DashboardPage(ChromeDriveSelenium);
         String headerTitle = dasbhboardPage.getHeaderText();
         Thread.sleep(5000); // Pausa de 3 segundos para que carguen los widgets
-        takeScreenshot("CP_loginSuccessful"); // Evidencia final
+        takeScreenshot("CP01_loginSuccessful1"); // Evidencia final
         Assertions.assertEquals("Dashboard",headerTitle);
         scrollFullPage(); // Baja hasta el final
-        takeScreenshot("Dashboard_Con_Scroll");
+        takeScreenshot("CP01_loginSuccessful2");
         //try { Thread.sleep(5000); } catch (InterruptedException e) { e.printStackTrace(); }
     }
 }
