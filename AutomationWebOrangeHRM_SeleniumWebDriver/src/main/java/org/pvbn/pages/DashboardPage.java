@@ -1,28 +1,21 @@
 package org.pvbn.pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 
-public class DashboardPage {
-    private WebDriver chromeDriveSelenium;
-    private WebDriverWait waitDrive;
+public class DashboardPage extends BasePage{
 
-    //Selector
+    //Locator
     private By headerDashboard = By.xpath("//h6[text()='Dashboard']");
 
     //Constructor
-    public DashboardPage(WebDriver ChromeDriveSelenium){
-        this.chromeDriveSelenium = ChromeDriveSelenium;
-        this.waitDrive =  new WebDriverWait(ChromeDriveSelenium, Duration.ofSeconds(10));
+    public DashboardPage(WebDriver driverSelenium){
+       super(driverSelenium);
     }
 
-    //Action
-    public String getHeaderText(){
-        return waitDrive.until(ExpectedConditions.visibilityOfElementLocated(headerDashboard)).getText();
+    //Metodos
+    public String capturaElemento(){
+        return visibleElement(headerDashboard);
     }
 }

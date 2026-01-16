@@ -18,10 +18,6 @@ public class AdminPage {
         this.chromeDriveSelenium = ChromeDriveSelenium;
         this.waitDrive = new WebDriverWait(ChromeDriveSelenium, Duration.ofSeconds(10));
     }
-
-
-
-
     //Acciones
     public void openComboBox(){
         chromeDriveSelenium.findElement(comboboxUserRole).click();
