@@ -8,6 +8,7 @@ public class DashboardPage extends BasePage{
 
     //Locator
     private By headerDashboard = By.xpath("//h6[text()='Dashboard']");
+    private By cardTimeWork = By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div/div[1]/div/p");
 
     //Constructor
     public DashboardPage(WebDriver driverSelenium){
@@ -17,5 +18,9 @@ public class DashboardPage extends BasePage{
     //Metodos
     public String capturaElemento(){
         return visibleElement(headerDashboard);
+    }
+
+    public String validateHeader(){
+        return visibleElement(cardTimeWork);
     }
 }
