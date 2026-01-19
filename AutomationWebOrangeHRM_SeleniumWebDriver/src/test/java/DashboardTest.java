@@ -21,10 +21,17 @@ public class DashboardTest extends BaseTest {
                 "Employee Distribution by Sub Unit",
                 "Employee Distribution by Location"
         };
-        String titleDasbhoard = "Dashboard";
+        String titleDashboard = "Dashboard";
+        String footerDashboard = "OrangeHRM OS 5.8";
+
+
         String titleDashboardReal = dashboardPage.capturaElemento();
-        Assertions.assertEquals(titleDasbhoard,titleDashboardReal, "El header no coincide con el valor esperado");
+        String footerDashboardReal = dashboardPage.capturaFooter();
+
+        Assertions.assertEquals(titleDashboard,titleDashboardReal, "El header no coincide con el valor esperado");
+        Assertions.assertEquals(footerDashboard,footerDashboardReal, "El footer no coincide con el valor esperado");
         System.out.println("El titulo de la página Dashboard es: " + titleDashboardReal);
+        System.out.println("El footer de la página Dashboard es: " + footerDashboardReal);
 
         for (String cardName : expectedHeaders){
             String actualText = dashboardPage.getCardHeaderName(cardName);

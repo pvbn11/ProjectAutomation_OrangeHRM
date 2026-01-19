@@ -17,7 +17,6 @@ public class BasePage {
     }
 
     protected String visibleElement (By locator) {
-        //waitSelenium.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText().equals(textExpected);
         return waitSelenium.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
     }
 

@@ -6,6 +6,7 @@ public class DashboardPage extends BasePage{
 
     //Locator
     private By headerDashboard = By.xpath("//h6[text()='Dashboard']");
+    private By footerNameWeb = By.xpath("//p[text()='OrangeHRM OS 5.8']");
 
     //Constructor
     public DashboardPage(WebDriver driverSelenium){
@@ -16,6 +17,11 @@ public class DashboardPage extends BasePage{
     public String capturaElemento(){
         return visibleElement(headerDashboard);
     }
+
+    public String capturaFooter(){
+        return visibleElement(footerNameWeb);
+    }
+
 
     public String getCardHeaderName (String cardName){
         By dinamicCardLocatorDashboard = By.xpath("//p[text()='" + cardName + "']");
